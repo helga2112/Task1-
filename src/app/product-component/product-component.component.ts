@@ -28,7 +28,7 @@ export class ProductComponentComponent implements OnInit {
     }
 
   ngOnInit() {
-    this.buttonByeTitle = 'Bye';
+    this.buttonByeTitle = 'Buy';
   }
 
   onClickBye() {
