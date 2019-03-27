@@ -1,3 +1,7 @@
 export  interface IProductModel {
-  products: any;
+  name;
+  description;
+  price;
+  isAvailable;
+  category;
 }

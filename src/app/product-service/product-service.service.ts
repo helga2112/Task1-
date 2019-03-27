@@ -1,22 +1,23 @@
 import { Injectable } from '@angular/core';
 import {Category} from '../product-component/product-component.component';
-import {TOProduct} from '../TypeObjects/TOProduct';
+import {IProductModel} from '../models/IProductModel';
+import {ProductModel} from "../models/ProductModel";
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductServiceService {
 
-  products = [{name : 'Orange', description: 'Oranges from India', price: 45, isAvailable: true, category: Category.Fruits},
-    {name : 'Banana', description: 'Bananas from Africa', price: 38, isAvailable: true, category: Category.Fruits},
-    {name : 'Potato', description: 'Potato from Ukraine', price: 15, isAvailable: true, category: Category.Vegetables},
-    {name : 'Nut', description: 'Nuts from squirrel', price: 150, isAvailable: true, category: Category.Nuts},
-    {name : 'Apple Juice', description: 'Apple Juice from grammy garden', price: 45, isAvailable: true, category: Category.Fruits}
+  products = [new ProductModel('Orange', 'Oranges from India', 45, true, Category.Fruits),
+              new ProductModel('Banana', 'Bananas from Africa', 38, true, Category.Fruits),
+              new ProductModel('Potato', 'Potato from Ukraine', 15, true, Category.Vegetables),
+              new ProductModel('Nut', 'Nuts from squirrel', 150, true, Category.Nuts),
+              new ProductModel('Apple Juice', 'Apple Juice from grammy garden', 45, true, Category.Fruits)
   ];
 
   constructor() { }
 
-  getProductList(): Array<TOProduct> {
+  getProductList(): Array<IProductModel> {
     return this.products;
   }
 }

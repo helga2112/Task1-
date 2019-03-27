@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {TOProduct} from '../TypeObjects/TOProduct';
+import {IProductModel} from '../models/IProductModel';
 
 export  enum Category {
   Vegetables,
@@ -16,23 +16,26 @@ export  enum Category {
 })
 export class ProductComponentComponent implements OnInit {
 
-    buttonByeTitle = 'Bye'
-    name = 'Test Name';
-    description = 'Here is the test shop';
-    price = 100;
-    isAvailable = true;
-    category = Category.Fruits;
+    buttonByeTitle: string;
+    name: string;
+    description: string;
+    price: number;
+    isAvailable: boolean;
+    category: Category;
 
-    constructor() { }
+    data: IProductModel;
+    constructor() {
+    }
 
   ngOnInit() {
+    this.buttonByeTitle = 'Bye';
   }
 
   onClickBye() {
     console.log( 'You\'ve bought a product!');
   }
 
-  setData( data: TOProduct) {
+  setData( data: IProductModel) {
     this.name = data.name;
     this.description = data.description;
     this.price = data.price;
