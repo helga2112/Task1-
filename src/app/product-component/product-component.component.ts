@@ -35,12 +35,4 @@ export class ProductComponentComponent implements OnInit {
     console.log( 'You\'ve bought a product!');
   }
 
-  setData( data: IProductModel) {
-    this.name = data.name;
-    this.description = data.description;
-    this.price = data.price;
-    this.isAvailable = data.isAvailable;
-    this.category = data.category;
-  }
-
 }

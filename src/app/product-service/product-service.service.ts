@@ -6,7 +6,7 @@ import {ProductModel} from "../models/ProductModel";
 @Injectable({
   providedIn: 'root'
 })
-export class ProductServiceService {
+export class GetProductService {
 
   products = [new ProductModel('Orange', 'Oranges from India', 45, true, Category.Fruits),
               new ProductModel('Banana', 'Bananas from Africa', 38, true, Category.Fruits),
