@@ -1,0 +1,25 @@
+table {
+    border-spacing: 0 10px;
+    }
+    th {
+    padding: 10px 20px;
+    background: #56433D;
+    color: #F9C941;
+    border-right: 2px solid; 
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9em;
+    }
+    th:first-child {
+    text-align: left;
+    }
+   
+    td {
+    width: 50%;
+    vertical-align: top;
+    padding: 10px;
+    border-top: 2px solid #56433D;
+    border-bottom: 2px solid #56433D;
+    border-right: 2px solid #56433D;
+    }
+    

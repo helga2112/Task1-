@@ -1,6 +1,25 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-</div>
-<app-product-list-component></app-product-list-component>
+<h1 #appTitle></h1>
+<table>
+    <tr>
+        <th colspan="2">Products</th>
+    </tr>
 
-<router-outlet></router-outlet>
+    <tr>
+        <td>
+            <app-product-list-component>
+            </app-product-list-component>
+       </td>
+       
+       <td>
+          <app-cart-list>
+
+          </app-cart-list>
+       </td>
+      
+    </tr>
+   
+</table>
+
+
+
+
