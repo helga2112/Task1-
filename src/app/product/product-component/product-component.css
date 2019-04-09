@@ -1,0 +1,54 @@
+.business-card {
+  padding: 5px;
+  background: #E7F3E5;
+  position: relative;
+  width: 85%;
+}
+.business-card:before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 14px;
+  left: 14px;
+  z-index: 3;
+  width: 30%;
+}
+.business-card h1 {
+  min-width: 300px;
+  text-align: center;
+  position: relative;
+  padding: 10px 0;
+  margin: 0;
+  font-family: 'Cormorant SC', serif;
+}
+.business-card h1:before {
+  content: "";
+  position: absolute;
+  width: 64px;
+  height: 6px;
+  left: -4px;
+  top: -4px;
+  background: #E7F3E5;
+}
+.business-card h1:after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 5px;
+  left: 42px;
+  top: -4px;
+}
+.business-card a {
+  display: block;
+  text-decoration: none;
+  text-shadow: 1px 1px 0 white;
+}
+.business-card span {
+  display: block;
+  text-transform: uppercase;
+  font-size: .5em;
+  margin-top: 5px;
+  letter-spacing: 2px;
+  font-weight: 50;
+}

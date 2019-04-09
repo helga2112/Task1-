@@ -1,0 +1,11 @@
+<div class="business-card" (mouseover)='onMouseOver()' (onfocus) = 'onBlur()'>
+    <div class="logo">
+        <label>Product: {{product.name}}</label><p>
+        <label>Description:{{product.description}}</label><p>
+        <label>Price: {{product.price}}</label><p>
+        <label>Is available: {{product.isAvailable}}</label><p>
+        <label>Category: {{product.category}}</label><p>
+    </div>
+</div>
+<button type="button" [disabled]="product.isAvailable" (click)="onClickBye()" >{{buttonByeTitle}}</button>
+<p>
