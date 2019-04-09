@@ -30,15 +30,12 @@ export class ProductComponent implements OnInit {
   }
 
   onClickBye() {
-    console.log (this.product);
     this.service.addProduct(this.product);
   }
 
   onMouseOver() {
-    console.log ('mouse over');
   }
 
   onBlur() {
-    console.log ('onBlur');
   }
 }

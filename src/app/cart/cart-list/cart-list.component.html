@@ -1,6 +1,11 @@
 <p>
   Added to Cart: {{totalAmountOfProducts}}
 </p>
+<p>
+  Total amount: {{totalPrice}}
+</p>
+<button *ngIf='!isEmptyList' (click)='clearCart()' type="button" >{{clearCartButtonTitle}}</button>
+
 <app-cart-item
     *ngFor="let product of products"
     [product] = "product"

@@ -7,6 +7,7 @@ import { CoreModule } from './core/core.module';
 import { OrderModule } from './order/order.module';
 import { ProductModule } from './product/product.module';
 import { SharedModule } from './shared/shared.module';
+import { LocalStorageModule } from './local-storage/local-storage.module';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { SharedModule } from './shared/shared.module';
     CoreModule,
     OrderModule,
     ProductModule,
-    SharedModule
+    SharedModule,
+    LocalStorageModule
   ],
   providers: [],
   bootstrap: [AppComponent]
