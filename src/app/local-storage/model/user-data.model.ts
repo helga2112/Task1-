@@ -1,6 +1,6 @@
 import { IUserData } from "./iuser-data";
 
-export class ProductModel implements IUserData{
+export class UserModel implements IUserData{
 
 	constructor ( public id: string,
 		public name : string,

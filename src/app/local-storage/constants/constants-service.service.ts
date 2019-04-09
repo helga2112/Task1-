@@ -3,11 +3,16 @@ import { LocalStorageModule } from '../local-storage.module';
 
 @Injectable({
   providedIn: LocalStorageModule,
-  useValue: {
-    App: "TaskManager", Ver: "1.0" 
-  }
 })
 export class ConstantsServiceService {
 
+  contents: {
+    App: "TaskManager", Ver: "1.0" 
+  }
+
   constructor() { }
+
+  getContents(){
+    return this.contents;
+  }
 }
