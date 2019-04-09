@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
+import { LocalStorageModule } from '../local-storage.module';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: LocalStorageModule
 })
 export class GeneratorServiceService {
 

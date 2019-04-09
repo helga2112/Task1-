@@ -11,10 +11,10 @@ import { MyLocalStorageService } from '../../local-storage/localStorage/local-st
 })
 export class ContactUsComponent implements OnInit {
 
-   constructor(@Optional() public myLocalStorageService: MyLocalStorageService)
-              //  public configOptionsService: ConfigOptionsService,
-              //  public constantservice: ConstantsServiceService,
-              //  public generatorService: GeneratorServiceService)
+   constructor(@Optional() public myLocalStorageService: MyLocalStorageService,
+               @Optional() public configOptionsService: ConfigOptionsService,
+               @Optional() public constantservice: ConstantsServiceService,
+               @Optional() public generatorService: GeneratorServiceService)
           { }
 
   ngOnInit() {
