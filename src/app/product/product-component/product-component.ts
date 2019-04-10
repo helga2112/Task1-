@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, ElementRef} from '@angular/core';
 import { CartService } from 'src/app/cart/services/cart.service';
 import { IProductModel } from '../models/IProductModel';
 
@@ -33,9 +33,4 @@ export class ProductComponent implements OnInit {
     this.service.addProduct(this.product);
   }
 
-  onMouseOver() {
-  }
-
-  onBlur() {
-  }
 }

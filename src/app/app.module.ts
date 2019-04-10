@@ -8,6 +8,7 @@ import { OrderModule } from './order/order.module';
 import { ProductModule } from './product/product.module';
 import { SharedModule } from './shared/shared.module';
 import { LocalStorageModule } from './local-storage/local-storage.module';
+import { ProductBackgroundColorDirective } from './Derectives/change-color.derective';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { LocalStorageModule } from './local-storage/local-storage.module';
     OrderModule,
     ProductModule,
     SharedModule,
-    LocalStorageModule
+    LocalStorageModule,
+    ProductBackgroundColorDirective
   ],
   providers: [],
   bootstrap: [AppComponent]
