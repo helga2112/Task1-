@@ -3,7 +3,7 @@ import { Directive, ElementRef, HostListener, Input } from '@angular/core';
 @Directive({
   selector: '[productBackgroundColor]'
 })
-export class ProductBackgroundColorDirective {
+export class CustomColorDirective {
 
   @Input('productBackgroundColor') color: string;
   private el: HTMLElement;

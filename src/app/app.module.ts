@@ -8,7 +8,6 @@ import { OrderModule } from './order/order.module';
 import { ProductModule } from './product/product.module';
 import { SharedModule } from './shared/shared.module';
 import { LocalStorageModule } from './local-storage/local-storage.module';
-import { ProductBackgroundColorDirective } from './Derectives/change-color.derective';
 
 @NgModule({
   declarations: [
@@ -23,7 +22,7 @@ import { ProductBackgroundColorDirective } from './Derectives/change-color.derec
     ProductModule,
     SharedModule,
     LocalStorageModule,
-    ProductBackgroundColorDirective
+   //CustomColorDirective
   ],
   providers: [],
   bootstrap: [AppComponent]
