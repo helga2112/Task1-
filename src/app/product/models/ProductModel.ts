@@ -7,17 +7,10 @@ export class ProductModel implements IProductModel {
                public price: number,
                public isAvailable: boolean,
                public category: Category,
-               public maxAmount: number,
-               public specialPrice: number
+               public maxAmount?: number,
+               public specialPrice?: number,
+               public ammountInCart?: number
                 ) {
-
-    this.name = name;
-    this.description = description;
-    this.price = price;
-    this.isAvailable = isAvailable;
-    this.category = category;
-    this.maxAmount = maxAmount;
-    this.specialPrice = specialPrice;
   }
 
 }

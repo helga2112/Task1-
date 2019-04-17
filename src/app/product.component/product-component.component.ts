@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {IProductModel} from '../models/IProductModel';
+import { IProductModel } from '../product/models/IProductModel';
 
 export  enum Category {
   Vegetables,

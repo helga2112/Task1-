@@ -6,7 +6,7 @@ export  interface IProductModel {
   price: number;
   isAvailable: boolean;
   category: Category;
-  maxAmount: number;
-  specialPrice: number;
+  maxAmount?: number;
+  specialPrice?: number;
   ammountInCart?: number;
 }
