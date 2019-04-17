@@ -22,6 +22,8 @@ export class CartListComponent implements OnInit, DoCheck {
   isEmptyList = true;
   clearCartButtonTitle = 'Clear Cart';
 
+  currentDate: Date;
+
   private differ: any;
 
   constructor(public service: CartService,  private differs: KeyValueDiffers, private ref: ChangeDetectorRef) {
@@ -30,6 +32,7 @@ export class CartListComponent implements OnInit, DoCheck {
   ngOnInit() {
     this.differ = this.differs.find(this.products).create();
     this.service.emitter.addListener('CART_UPDATED', this.addComponent.bind(this));
+    this.currentDate = new Date();
   }
 
 

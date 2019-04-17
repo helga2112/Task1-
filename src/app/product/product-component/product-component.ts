@@ -1,13 +1,17 @@
 import { Component, OnInit, Input, ElementRef} from '@angular/core';
 import { CartService } from 'src/app/cart/services/cart.service';
 import { IProductModel } from '../models/IProductModel';
+import { registerLocaleData } from '@angular/common';
+import localeFr from '@angular/common/locales/fr';
+
+registerLocaleData(localeFr);
 
 export  enum Category {
-  Vegetables,
-  Fruits,
-  Nuts,
-  Salads,
-  Juice
+  Vegetables = 'Vegetables',
+  Fruits = 'Fruits',
+  Nuts = 'Nuts',
+  Salads = 'Salads',
+  Juice = 'Juice'
 }
 
 @Component({
