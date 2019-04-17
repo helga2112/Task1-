@@ -14,19 +14,6 @@ export class CartItemComponent implements OnInit {
   @Input()
   product: IProductModel;
 
-  @HostBinding('class')
-  attrClass = 'headingClass';
-
-  @HostListener('mouseenter', ['$event'])
-  enter(event: Event) {
-    this.attrClass = 'headingClassOver';
-  }
-
-  @HostListener('mouseleave', ['$event'])
-  leave(event: Event) {
-    this.attrClass = 'headingClass';
-  }
-
   constructor(public service: CartService) { }
 
   ngOnInit() {

@@ -9,8 +9,7 @@ import { CartItemComponent } from './cart-item/cart-item.component';
     CommonModule
   ],
   exports: [
-    CartListComponent,
-    CartItemComponent
+    CartListComponent
   ]
 })
 export class CartModule { }
