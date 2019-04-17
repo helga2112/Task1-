@@ -11,10 +11,8 @@ export class ProductListComponent implements OnInit {
   @Input()
   products: Array<ProductModel> = [];
 
- 
-  constructor(public service:GetProductService) {
+  constructor(public service: GetProductService) {
   }
-
 
   ngOnInit() {
     this.products = this.service.getProductList();

@@ -22,7 +22,7 @@ import { LocalStorageModule } from './local-storage/local-storage.module';
     ProductModule,
     SharedModule,
     LocalStorageModule,
-   //CustomColorDirective
+   // CustomColorDirective
   ],
   providers: [],
   bootstrap: [AppComponent]

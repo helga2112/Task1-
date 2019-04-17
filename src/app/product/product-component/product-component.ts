@@ -16,14 +16,12 @@ export  enum Category {
   styleUrls: ['./product-component.css']
 })
 export class ProductComponent implements OnInit {
-  
   @Input()
   product: IProductModel;
 
   buttonByeTitle: string;
-  
-    constructor(public service:CartService) {
-    }
+  constructor(public service: CartService ) {
+  }
 
   ngOnInit() {
     this.buttonByeTitle = 'Buy';

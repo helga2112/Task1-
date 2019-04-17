@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter, KeyValueDiffers, ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, KeyValueDiffers, ChangeDetectorRef, DoCheck } from '@angular/core';
 import { ProductModel } from 'src/app/product/models/ProductModel';
 import { CartService } from '../services/cart.service';
 import { $ } from 'protractor';
@@ -8,7 +8,7 @@ import { $ } from 'protractor';
   templateUrl: './cart-list.component.html',
   styleUrls: ['./cart-list.component.css']
 })
-export class CartListComponent implements OnInit{
+export class CartListComponent implements OnInit, DoCheck {
   @Output()
   addProduct: EventEmitter<ProductModel> = new EventEmitter<ProductModel>();
 
@@ -20,13 +20,11 @@ export class CartListComponent implements OnInit{
   totalPrice = 0;
 
   isEmptyList = true;
-  
-  clearCartButtonTitle = 'Clear Cart'
+  clearCartButtonTitle = 'Clear Cart';
 
   private differ: any;
 
-  constructor(public service:CartService,  private differs: KeyValueDiffers, private ref: ChangeDetectorRef) {
-    
+  constructor(public service: CartService,  private differs: KeyValueDiffers, private ref: ChangeDetectorRef) {
   }
 
   ngOnInit() {
@@ -35,30 +33,28 @@ export class CartListComponent implements OnInit{
   }
 
 
-  ngDoCheck(): void {
+  ngDoCheck() {
     // changes is an instance of DefaultKeyValueDiffer Class
     const  changes = this.differ.diff( this.products);
 
     if (changes) {
       this.isEmptyList = false;
-         changes.forEachAddedItem(item => this.logChange('added', item));
-         changes.forEachRemovedItem(item => this.logChange('removed', item));
-         changes.forEachChangedItem(item => this.logChange('changed', item));
+      changes.forEachAddedItem(item => this.logChange('added', item));
+      changes.forEachRemovedItem(item => this.logChange('removed', item));
+      changes.forEachChangedItem(item => this.logChange('changed', item));
     }
 }
 
-  addComponent(){
+  addComponent() {
     this.products = this.service.getCartProducts();
     this.totalAmountOfProducts = this.service.getTotalCartAmount();
     this.totalPrice = this.service.getTotalPrice();
-
   }
-  
-  logChange(text, item){
+  logChange(text, item) {
     console.log(text, item);
   }
 
-  clearCart(){
+  clearCart() {
     this.service.removeAllProducts();
   }
 

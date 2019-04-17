@@ -9,18 +9,18 @@ export class MyLocalStorageService {
   constructor() { }
 
   // set item from local storage
-  setItem(itemName: string, item: string){
+  setItem(itemName: string, item: string) {
     localStorage.setItem(itemName, item);
   }
 
   // get item from local storage
-  getItem(key:string){
-    let data: string = localStorage.getItem(key);
+  getItem(key: string) {
+    const data: string = localStorage.getItem(key);
     return data;
   }
 
   // remove item from local storage
-  removeItem(key:string){
+  removeItem(key: string) {
     localStorage.removeItem(key);
   }
 }

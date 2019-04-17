@@ -1,11 +1,11 @@
 import { Directive, ElementRef, HostListener, Input } from '@angular/core';
 
 @Directive({
-  selector: '[productBackgroundColor]'
+  selector: '[appProductBackgroundColor]'
 })
 export class CustomColorDirective {
 
-  @Input('productBackgroundColor') color: string;
+  @Input('appProductBackgroundColor') color: string;
   private el: HTMLElement;
 
   constructor(el: ElementRef) {

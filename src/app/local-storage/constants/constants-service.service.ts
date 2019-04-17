@@ -7,12 +7,12 @@ import { LocalStorageModule } from '../local-storage.module';
 export class ConstantsServiceService {
 
   contents: {
-    App: "TaskManager", Ver: "1.0" 
-  }
+    App: 'TaskManager', Ver: '1.0';
+  };
 
   constructor() { }
 
-  getContents(){
+  getContents() {
     return this.contents;
   }
 }

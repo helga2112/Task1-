@@ -2,14 +2,14 @@ import {IProductModel} from './IProductModel';
 import {Category} from '../product-component/product-component';
 
 export class ProductModel implements IProductModel {
-  constructor ( public name: string,
-                public description : string,
-                public price : number,
-                public isAvailable : boolean,
-                public category : Category,
-                public maxAmount:number,
-                public specialPrice:number
-                ){
+  constructor( public name: string,
+               public description: string,
+               public price: number,
+               public isAvailable: boolean,
+               public category: Category,
+               public maxAmount: number,
+               public specialPrice: number
+                ) {
 
     this.name = name;
     this.description = description;
@@ -17,7 +17,7 @@ export class ProductModel implements IProductModel {
     this.isAvailable = isAvailable;
     this.category = category;
     this.maxAmount = maxAmount;
-    this.specialPrice = specialPrice
+    this.specialPrice = specialPrice;
   }
 
 }

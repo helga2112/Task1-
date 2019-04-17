@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core'
+import { Injectable } from '@angular/core';
 import { LocalStorageModule } from '../local-storage.module';
 import { UserModel } from '../model/user-data.model';
 
@@ -7,20 +7,16 @@ import { UserModel } from '../model/user-data.model';
 })
 export class ConfigOptionsService {
 
-  private user:UserModel = new UserModel('1', 
-                                         'Test User',
-                                         'qwerty', 
-                                         'test@gmail.com',
-                                         '+38050123456789');
+  private user: UserModel = new UserModel('1', 'Test User', 'qwerty', 'test@gmail.com', '+38050123456789');
 
   constructor() { }
 
-  getUser(){
+  getUser() {
     return this.user;
   }
 
-  setUser(data:UserModel){
-    let {id = '-1', name = '', password = '', email ='', phone = ''} = data;
+  setUser(data: UserModel) {
+    const { id = '-1', name = '', password = '', email = '', phone = ''} = data;
 
 
     this.user = new UserModel(id,
@@ -29,19 +25,15 @@ export class ConfigOptionsService {
                               email,
                               phone
                               );
-    
-
-
   }
 
-  
-  // Set or change property of user object 
-  setProperty(key:string, value:string){
+  // Set or change property of user object
+  setProperty(key: string, value: string) {
     this.user[key] = value;
-    }
+  }
 
   // Get proeprty by key
-  getProperty(key:string){
+  getProperty(key: string) {
     return  this.user[key];
   }
 }

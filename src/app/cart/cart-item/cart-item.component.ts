@@ -9,6 +9,11 @@ import { CartService } from '../services/cart.service';
 })
 export class CartItemComponent implements OnInit {
 
+  buttonTitle = 'Remove from cart';
+
+  @Input()
+  product: IProductModel;
+
   @HostBinding('class')
   attrClass = 'headingClass';
 
@@ -22,17 +27,12 @@ export class CartItemComponent implements OnInit {
     this.attrClass = 'headingClass';
   }
 
-  @Input()
-  product: IProductModel;
-
-  buttonTitle = 'Remove from cart';
-  constructor(public service:CartService) { }
+  constructor(public service: CartService) { }
 
   ngOnInit() {
-    
   }
 
-  onClick(){
+  onClick() {
     this.service.removeItem(this.product);
   }
 

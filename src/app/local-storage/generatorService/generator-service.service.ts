@@ -6,7 +6,6 @@ export class GeneratorService {
   constructor() { }
 
   getData() {
-    return "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    return 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
   }
-  
 }
