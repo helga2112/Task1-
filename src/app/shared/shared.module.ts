@@ -6,6 +6,9 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
   declarations: [ContactUsComponent],
   imports: [
     CommonModule
+  ],
+  exports: [
+    ContactUsComponent
   ]
 })
 export class SharedModule { }
