@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { LocalStorageModule } from '../local-storage.module';
-import { UserModel } from '../model/user-data.model';
+import { LocalStorageModule } from '../../local-storage/local-storage.module';
+import { UserModel } from '../../local-storage/model/user-data.model';
 
 @Injectable({
   providedIn: LocalStorageModule

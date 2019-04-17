@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LocalStorageModule } from '../local-storage/local-storage.module';
-import { GeneratorService } from '../local-storage/generatorService/generator-service.service';
 import { GeneratorFactory, hashGenerator } from '../services/generator.service';
+import { GeneratorService } from '../services/generatorService/generator-service.service';
 
 @NgModule({
   declarations: [],

@@ -1,7 +1,7 @@
 import { Component, OnInit, Host, Optional } from '@angular/core';
-import { ConfigOptionsService } from '../../local-storage/configOptions/config-options.service';
-import { ConstantsServiceService } from '../../local-storage/constants/constants-service.service';
-import { GeneratorService } from '../../local-storage/generatorService/generator-service.service';
+import { ConfigOptionsService } from '../../services/configOptions/config-options.service';
+import { ConstantsServiceService } from '../../services/constants/constants-service.service';
+import { GeneratorService } from '../../services/generatorService/generator-service.service';
 import { MyLocalStorageService } from '../../local-storage/localStorage/local-storage.service';
 
 @Component({

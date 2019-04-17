@@ -1,5 +1,5 @@
 import { InjectionToken } from '@angular/core';
-import { GeneratorService } from '../local-storage/generatorService/generator-service.service';
+import { GeneratorService } from './generatorService/generator-service.service';
 
 export const hashGenerator = new InjectionToken<any[]>('HashGenerator');
 
