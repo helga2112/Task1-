@@ -1,4 +1,5 @@
+<!-- <code>promise|async</code>: Promise: {{ promise | async }} -->
 <app-product-component
-    *ngFor="let product of products"
+    *ngFor="let product of products | orderBy : filterargs"
     [product] = "product">
 </app-product-component>

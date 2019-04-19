@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { IProductModel } from '../product/models/IProductModel';
 
 export  enum Category {
-  Vegetables,
-  Fruits,
-  Nuts,
-  Salads,
-  Juice
+  Vegetables = 'Vegetables',
+  Fruits = 'Fruits',
+  Nuts = 'Nuts',
+  Salads = 'Salads',
+  Juice = 'Juice'
 }
 
 @Component({

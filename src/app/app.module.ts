@@ -11,7 +11,7 @@ import { LocalStorageModule } from './local-storage/local-storage.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
