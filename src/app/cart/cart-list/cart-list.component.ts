@@ -23,7 +23,7 @@ export class CartListComponent implements OnInit, DoCheck {
 
   currentDate: Date;
 
-  keys: Array<string> = ['name', 'price','category'];
+  keys: Array<string> = ['name', 'price', 'category'];
 
   filterargs = {property: 'name', descending: true};
 
@@ -66,9 +66,10 @@ export class CartListComponent implements OnInit, DoCheck {
     this.service.removeAllProducts();
   }
 
-  sortBy(event: Event) : void {
-    console.log(event.target['value']);
-    let sortProeprty: string = event.target['value'];
+  sortBy(event: Event): void {
+    const value = 'value';
+    console.log(event.target[value]);
+    const sortProeprty: string = event.target[value];
     this.filterargs.property = sortProeprty;
     this.products = [ ...this.products];
   }

@@ -2,21 +2,18 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProductComponent } from './product-component/product-component';
 import { ProductListComponent } from './product-list-component/product-list-component';
-import { OrderByPipe } from '../../utils/pipes/order-by.pipe';
 
 @NgModule({
   declarations: [
     ProductComponent,
-    ProductListComponent,
-    OrderByPipe
+    ProductListComponent
   ],
   imports: [
     CommonModule
   ],
   exports: [
     ProductComponent,
-    ProductListComponent,
-    OrderByPipe
+    ProductListComponent
   ]
 })
 export class ProductModule { }

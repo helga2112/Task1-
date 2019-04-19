@@ -21,12 +21,12 @@ export class GetProductService {
     return this.products;
   }*/
 
-  getProducts(): Promise<Array<ProductModel>>{
-   return new Promise ((resolve, reject)=> {
+  getProducts(): Promise<Array<ProductModel>> {
+   return new Promise ((resolve, reject) => {
     setTimeout(() => {
       resolve(this.products);
       // reject('Error');
     }, 500);
   }).catch(error => error);
-  } 
+}
 }

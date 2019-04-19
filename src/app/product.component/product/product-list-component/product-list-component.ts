@@ -12,7 +12,7 @@ export class ProductListComponent implements OnInit {
   @Input()
   products: Array <ProductModel> = [];
 
-  promise:  Promise<Array<ProductModel>>;
+  promise: Promise<Array<ProductModel>>;
 
   filterargs = {property: 'name', descending: true};
 
@@ -24,8 +24,7 @@ export class ProductListComponent implements OnInit {
     this.promise.then (
       property => (this.products = property ),
       reject => console.log('[ERROR] ', reject)
-    )
-    console.log(this.products);
+    );
   }
 
 
