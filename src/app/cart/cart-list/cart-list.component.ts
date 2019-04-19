@@ -1,7 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter, KeyValueDiffers, ChangeDetectorRef, DoCheck } from '@angular/core';
-import { ProductModel } from 'src/app/product/models/ProductModel';
+import { ProductModel } from 'src/app/product.component/product/models/ProductModel';
 import { CartService } from '../services/cart.service';
-import { $ } from 'protractor';
 
 @Component({
   selector: 'app-cart-list',
@@ -23,6 +22,10 @@ export class CartListComponent implements OnInit, DoCheck {
   clearCartButtonTitle = 'Clear Cart';
 
   currentDate: Date;
+
+  keys: Array<string> = ['name', 'price','category'];
+
+  filterargs = {property: 'name', descending: true};
 
   private differ: any;
 
@@ -53,12 +56,21 @@ export class CartListComponent implements OnInit, DoCheck {
     this.totalAmountOfProducts = this.service.getTotalCartAmount();
     this.totalPrice = this.service.getTotalPrice();
   }
+
   logChange(text, item) {
     console.log(text, item);
   }
 
   clearCart() {
+    this.isEmptyList = true;
     this.service.removeAllProducts();
+  }
+
+  sortBy(event: Event) : void {
+    console.log(event.target['value']);
+    let sortProeprty: string = event.target['value'];
+    this.filterargs.property = sortProeprty;
+    this.products = [ ...this.products];
   }
 
 }

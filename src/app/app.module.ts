@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { CartModule } from './cart/cart.module';
 import { CoreModule } from './core/core.module';
 import { OrderModule } from './order/order.module';
-import { ProductModule } from './product/product.module';
+import { ProductModule } from './product.component/product/product.module';
 import { SharedModule } from './shared/shared.module';
 import { LocalStorageModule } from './local-storage/local-storage.module';
 

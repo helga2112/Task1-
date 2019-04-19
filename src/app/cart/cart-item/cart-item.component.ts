@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, HostBinding, HostListener } from '@angular/core';
-import { IProductModel } from 'src/app/product/models/IProductModel';
+import { IProductModel } from 'src/app/product.component/product/models/IProductModel';
 import { CartService } from '../services/cart.service';
 
 @Component({

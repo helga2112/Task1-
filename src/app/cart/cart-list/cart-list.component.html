@@ -10,8 +10,15 @@
 </p>
 <button *ngIf='!isEmptyList' (click)='clearCart()' type="button" >{{clearCartButtonTitle}}</button>
 
+<p></p>
+<div *ngIf='!isEmptyList'>Sort by:
+<select (change)="sortBy($event)">
+  <option *ngFor="let key of keys" >{{key}}</option>
+</select></div>
+<p></p>
+
 <app-cart-item
-    *ngFor="let product of products"
+    *ngFor="let product of products | orderBy : filterargs"
     [product] = "product"
     >
 </app-cart-item>

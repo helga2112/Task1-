@@ -2,6 +2,7 @@
     <div class="logo">
         <label>Product: {{product.name}}</label><p>
         <label>Ammount: {{product.ammountInCart}}</label><p>
+        <label>Price: {{product.price | currency:'USD'}}</label><p>
     </div>
 </div>
 <button type="button" [disabled]="product.isAvailable" (click)="onClick()" >{{buttonTitle}}</button>

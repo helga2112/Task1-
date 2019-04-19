@@ -1,8 +1,9 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { ProductModel } from '../product.component/product/models/ProductModel';
+import { ProductModel } from '../../product.component/product/models/ProductModel';
 
 @Pipe({
-  name: 'orderBy'
+  name: 'orderBy',
+  pure: false
 })
 export class OrderByPipe implements PipeTransform {
   sortProperty: string = '';
